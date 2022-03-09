@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{28866EB0-7993-C171-348D-8535A8E3480D}</ProjectGuid>
+    <ProjectGuid>{51AA138D-1170-0542-4B72-053BBCEE7F9D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -59,10 +59,11 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Wallet.cs" />
     <Compile Include="Assets\Scripts\WalletPresenter.cs" />
-    <Compile Include="Assets\Scripts\ClickDetector.cs" />
+    <Compile Include="Assets\Scripts\Wallet.cs" />
     <Compile Include="Assets\Scripts\CoinsView.cs" />
+    <Compile Include="Assets\Scripts\ClickDetector.cs" />
+    <Compile Include="Assets\Scripts\UIButtonActions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
