@@ -319,11 +319,17 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/VSSettingsProvider.ref.dll"
-"Assets/Scripts/ClickDetector.cs"
-"Assets/Scripts/CoinsView.cs"
-"Assets/Scripts/UIButtonActions.cs"
-"Assets/Scripts/Wallet.cs"
-"Assets/Scripts/WalletPresenter.cs"
+"Assets/Scripts/Model/BlockSpawner.cs"
+"Assets/Scripts/Model/DoodleJump/Doodler.cs"
+"Assets/Scripts/Model/Wallet.cs"
+"Assets/Scripts/Presenter/BarrierSpawnerPresenter.cs"
+"Assets/Scripts/Presenter/Player/DoodleJumpPresenter.cs"
+"Assets/Scripts/Presenter/WalletPresenter.cs"
+"Assets/Scripts/View/ClickDetector.cs"
+"Assets/Scripts/View/CoinsView.cs"
+"Assets/Scripts/View/DoodleJump/DoodleJumpCameraView.cs"
+"Assets/Scripts/View/Player/IgnoreCollisionAbove.cs"
+"Assets/Scripts/View/UIButtonActions.cs"
 -langversion:8.0
 
 /deterministic
