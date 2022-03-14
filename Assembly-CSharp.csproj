@@ -59,17 +59,23 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Model\BlockSpawner.cs" />
-    <Compile Include="Assets\Scripts\View\UIButtonActions.cs" />
-    <Compile Include="Assets\Scripts\Presenter\BarrierSpawnerPresenter.cs" />
-    <Compile Include="Assets\Scripts\Presenter\WalletPresenter.cs" />
-    <Compile Include="Assets\Scripts\Model\Wallet.cs" />
-    <Compile Include="Assets\Scripts\View\DoodleJump\DoodleJumpCameraView.cs" />
-    <Compile Include="Assets\Scripts\Presenter\Player\DoodleJumpPresenter.cs" />
-    <Compile Include="Assets\Scripts\View\CoinsView.cs" />
-    <Compile Include="Assets\Scripts\View\Player\IgnoreCollisionAbove.cs" />
-    <Compile Include="Assets\Scripts\View\ClickDetector.cs" />
-    <Compile Include="Assets\Scripts\Model\DoodleJump\Doodler.cs" />
+    <Compile Include="Assets\Resources\Model\DoodleJump\BlockSpawner.cs" />
+    <Compile Include="Assets\Resources\Model\Clicker\Upgrades.cs" />
+    <Compile Include="Assets\Resources\View\UIButtonActions.cs" />
+    <Compile Include="Assets\Resources\Presenter\BarrierSpawnerPresenter.cs" />
+    <Compile Include="Assets\Resources\Presenter\Clicker\WalletPresenter.cs" />
+    <Compile Include="Assets\Resources\Model\Clicker\Wallet.cs" />
+    <Compile Include="Assets\Resources\Model\Clicker\IUpgrade.cs" />
+    <Compile Include="Assets\Resources\View\DoodleJump\DoodleJumpCameraView.cs" />
+    <Compile Include="Assets\Resources\Model\Clicker\BaseClicker.cs" />
+    <Compile Include="Assets\Resources\Model\Clicker\UpgradeData.cs" />
+    <Compile Include="Assets\Resources\Model\DoodleJump\Doodler.cs" />
+    <Compile Include="Assets\Resources\Presenter\Player\DoodleJumpPresenter.cs" />
+    <Compile Include="Assets\Resources\View\CoinsView.cs" />
+    <Compile Include="Assets\Resources\View\ShopButtonActions.cs" />
+    <Compile Include="Assets\Resources\View\Player\IgnoreCollisionAbove.cs" />
+    <Compile Include="Assets\Resources\View\ClickDetector.cs" />
+    <Compile Include="Assets\Resources\Model\Clicker\AutoClicker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
