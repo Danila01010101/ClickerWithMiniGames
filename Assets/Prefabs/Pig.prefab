@@ -957,7 +957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  boundOne: 8
+  boundOne: 6.5
   boundTwo: -50
 --- !u!1 &3695449554544798844
 GameObject:

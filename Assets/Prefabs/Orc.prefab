@@ -1299,7 +1299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  boundOne: 8
+  boundOne: 6.5
   boundTwo: -50
 --- !u!1 &8205255131272852265
 GameObject:
