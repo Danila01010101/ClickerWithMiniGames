@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class Cart : MonoBehaviour
 {
+    [SerializeField] private float nitroDuration;
+    [SerializeField] private float coolDownNitro;
+    private float usingNitroStart;
+    private float usingNitroEnd;
     private float horizontalInput;
+    private float speed = 10f;
     private float zRange = 10;
+    private bool isUsingNitro = false;
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar healthBar;
-
-    void Start()
-    {
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
-    }
 
     public void TakeDamage(int damage)
     {
@@ -22,18 +22,42 @@ public class Cart : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
+    private void StartNitro()
+    {
+        isUsingNitro = true;
+        speed = 50f;
+        usingNitroStart = Time.time;
+    }
+
+    private void EndNitro()
+    {
+        isUsingNitro = false;
+        speed = 10f;
+        usingNitroEnd = Time.time;
+    }
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+
+        usingNitroEnd = -coolDownNitro;
+        usingNitroStart = -nitroDuration;
+    }
+
     void Update()
     {
-        float speed = 10f;
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && !isUsingNitro && Time.time - usingNitroEnd > coolDownNitro)
         {
-            speed = 20f;
+            StartNitro();
         }
-        else
+
+        if (isUsingNitro &&(Input.GetKeyUp(KeyCode.LeftShift) || Time.time - usingNitroStart > nitroDuration))
         {
-            speed = 10f;
+            EndNitro();
         }
+
 
 
         horizontalInput = Input.GetAxis("Horizontal");

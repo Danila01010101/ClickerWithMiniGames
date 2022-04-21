@@ -1853,7 +1853,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa35eb97cac2d974cadceb4424659451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOverScreen: {fileID: 1696322300}
 --- !u!1 &517878992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,8 +1945,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9b1a43761b92f244b7b83ebbbdc44f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nitroDuration: 0.5
+  coolDownNitro: 5
   maxHealth: 100
-  speed: 0
   currentHealth: 0
   healthBar: {fileID: 1417851004}
 --- !u!1 &550078404
