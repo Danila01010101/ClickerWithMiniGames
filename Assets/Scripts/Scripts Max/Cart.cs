@@ -5,12 +5,11 @@ using UnityEngine;
 public class Cart : MonoBehaviour
 {
     private float horizontalInput;
-    private float speed = 10f;
     private float zRange = 10;
     public int maxHealth = 100;
     public int currentHealth;
-
     public HealthBar healthBar;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -25,6 +24,17 @@ public class Cart : MonoBehaviour
 
     void Update()
     {
+        float speed = 10f;
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 20f;
+        }
+        else
+        {
+            speed = 10f;
+        }
+
 
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.forward * horizontalInput * Time.deltaTime * speed);
