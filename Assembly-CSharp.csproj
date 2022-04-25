@@ -67,6 +67,8 @@
     <Compile Include="Assets\Scripts\Presenter\WalletPresenter.cs" />
     <Compile Include="Assets\Scripts\Model\Wallet.cs" />
     <Compile Include="Assets\Scripts\Presenter\AlienDefender\CartPresener.cs" />
+    <Compile Include="Assets\Scripts\Scripts Max\GameOver.cs" />
+    <Compile Include="Assets\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\Scripts Max\Cart.cs" />
     <Compile Include="Assets\Scripts\View\DoodleJump\DoodleJumpCameraView.cs" />
     <Compile Include="Assets\Scripts\Scripts Max\MonsterMove.cs" />
@@ -75,8 +77,6 @@
     <Compile Include="Assets\Scripts\View\CoinsView.cs" />
     <Compile Include="Assets\Scripts\View\Player\IgnoreCollisionAbove.cs" />
     <Compile Include="Assets\Scripts\View\ClickDetector.cs" />
-    <Compile Include="Assets\Scripts\Scripts Max\GameOver.cs" />
-    <Compile Include="Assets\ChangeScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

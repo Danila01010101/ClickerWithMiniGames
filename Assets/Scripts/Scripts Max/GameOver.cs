@@ -10,16 +10,19 @@ public class GameOver : MonoBehaviour
     private void ShowGameOverScreen()
     {
         gameOverScreen.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void RestartButton()
     {
         SceneManager.LoadScene("AlienDefend");
+        Time.timeScale = 1f;
     }
 
     public void ExitToMenuButton()
     {
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1f;
     }
 
     private void OnEnable()
