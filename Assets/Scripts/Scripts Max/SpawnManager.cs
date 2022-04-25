@@ -19,5 +19,3 @@ public class SpawnManager : MonoBehaviour
         Instantiate(monsterPrefabs[monsterIndex], spawnPos, monsterPrefabs[monsterIndex].transform.rotation);
     }
 }
-
-
