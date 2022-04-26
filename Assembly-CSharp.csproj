@@ -56,27 +56,28 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Scripts Max\Bullet.cs" />
+    <Compile Include="Assets\Scripts\AlienDefend\Bullet.cs" />
     <Compile Include="Assets\Scripts\Model\BlockSpawner.cs" />
-    <Compile Include="Assets\Scripts\Scripts Max\BulletSpawner.cs" />
-    <Compile Include="Assets\Scripts\Scripts Max\Score.cs" />
-    <Compile Include="Assets\Scripts\Scripts Max\SpawnManager.cs" />
+    <Compile Include="Assets\Scripts\AlienDefend\BulletSpawner.cs" />
+    <Compile Include="Assets\Scripts\AlienDefend\Score.cs" />
+    <Compile Include="Assets\Scripts\AlienDefend\SpawnManager.cs" />
     <Compile Include="Assets\Scripts\View\UIButtonActions.cs" />
     <Compile Include="Assets\Scripts\Presenter\BarrierSpawnerPresenter.cs" />
-    <Compile Include="Assets\Scripts\Scripts Max\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\AlienDefend\HealthBar.cs" />
     <Compile Include="Assets\Scripts\Presenter\WalletPresenter.cs" />
     <Compile Include="Assets\Scripts\Model\Wallet.cs" />
     <Compile Include="Assets\Scripts\Presenter\AlienDefender\CartPresener.cs" />
-    <Compile Include="Assets\Scripts\Scripts Max\GameOver.cs" />
+    <Compile Include="Assets\Scripts\AlienDefend\GameOver.cs" />
     <Compile Include="Assets\ChangeScene.cs" />
-    <Compile Include="Assets\Scripts\Scripts Max\Cart.cs" />
+    <Compile Include="Assets\Scripts\AlienDefend\Cart.cs" />
     <Compile Include="Assets\Scripts\View\DoodleJump\DoodleJumpCameraView.cs" />
-    <Compile Include="Assets\Scripts\Scripts Max\MonsterMove.cs" />
+    <Compile Include="Assets\Scripts\AlienDefend\MonsterMove.cs" />
     <Compile Include="Assets\Scripts\Model\DoodleJump\Doodler.cs" />
     <Compile Include="Assets\Scripts\Presenter\Player\DoodleJumpPresenter.cs" />
     <Compile Include="Assets\Scripts\View\CoinsView.cs" />
     <Compile Include="Assets\Scripts\View\Player\IgnoreCollisionAbove.cs" />
     <Compile Include="Assets\Scripts\View\ClickDetector.cs" />
+    <Compile Include="Assets\Scripts\AlienDefend\GamePause.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
