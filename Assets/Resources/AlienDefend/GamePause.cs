@@ -15,28 +15,19 @@ public class GamePause : MonoBehaviour
         {
             if (GameIsPaused)
             {
-                Resume();
+                gamePauseScreen.SetActive(false);
+                gameBar.SetActive(true);
+                Time.timeScale = 1f;
+                GameIsPaused = false;
             }
             else
             {
-                Pause();
+                gamePauseScreen.SetActive(true);
+                gameBar.SetActive(false);
+                Time.timeScale = 0f;
+                GameIsPaused = true;
             }
         }
-    }
-    void Resume()
-    {
-        gamePauseScreen.SetActive(false);
-        gameBar.SetActive(true);
-        Time.timeScale = 1f;
-        GameIsPaused = false;
-    }
-
-    void Pause()
-    {
-        gamePauseScreen.SetActive(true);
-        gameBar.SetActive(false);
-        Time.timeScale = 0f;
-        GameIsPaused = true;
     }
 }
 
