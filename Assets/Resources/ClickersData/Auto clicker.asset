@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 30
   costMultiplier: 1.75
-  tickInterval: 0.1
+  tickInterval: 0.3
   revardAmount: 1
   revardMultiplier: 0

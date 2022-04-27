@@ -6,14 +6,15 @@ public class WalletPresenter : MonoBehaviour
     [SerializeField] private ClickDetector _clickDetector;
     [SerializeField] private ShopButtonActions _shopActions;
     [SerializeField] private UpgradeData _autoClickerData;
+    [SerializeField] private UpgradeData _accountantData;
 
     private Wallet _wallet;
 
-    public enum Upgrades { AutoClicker }
+    public enum Upgrades { AutoClicker, Buhgalter }
 
     private void Awake()
     {
-        _wallet = new Wallet(_autoClickerData);
+        _wallet = new Wallet(_autoClickerData, _accountantData);
     }
 
     private void Update()
@@ -27,6 +28,8 @@ public class WalletPresenter : MonoBehaviour
         _wallet.CoinAmountChanged += _coinsView.UpdateScore;
         _wallet.AutoClicker.CoinsEarned += _wallet.AddCoins;
         _wallet.AutoClicker.CoinsSpent += _wallet.SpentCoins;
+        _wallet.Accountant.CoinsEarned += _wallet.AddCoins;
+        _wallet.Accountant.CoinsSpent += _wallet.SpentCoins;
         _shopActions.ActivateUpgradeButtonPressed += _wallet.ActivateUpgrade;
     }
 
@@ -36,6 +39,8 @@ public class WalletPresenter : MonoBehaviour
         _wallet.CoinAmountChanged -= _coinsView.UpdateScore;
         _wallet.AutoClicker.CoinsEarned -= _wallet.AddCoins;
         _wallet.AutoClicker.CoinsSpent -= _wallet.SpentCoins;
+        _wallet.Accountant.CoinsEarned -= _wallet.AddCoins;
+        _wallet.Accountant.CoinsSpent -= _wallet.SpentCoins;
         _shopActions.ActivateUpgradeButtonPressed -= _wallet.ActivateUpgrade;
     }
 }

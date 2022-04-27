@@ -6,8 +6,10 @@ public class Wallet
     public int ÑoinsAmount{ get; }
 
     private AutoClicker _autoClicker;
+    private AwerageClicker _accountant;
 
     public AutoClicker AutoClicker => _autoClicker;
+    public AwerageClicker Accountant => _accountant;
     public Action<int> CoinAmountChanged;
 
     public void Update()
@@ -15,9 +17,10 @@ public class Wallet
         _autoClicker.Update();
     }
 
-    public Wallet(UpgradeData autoClickerData)
+    public Wallet(UpgradeData autoClickerData, UpgradeData accountantData)
     {
         _autoClicker = new AutoClicker(autoClickerData);
+        _accountant = new AwerageClicker(accountantData);
     }
 
     public void ActivateUpgrade(WalletPresenter.Upgrades upgrade)
@@ -26,6 +29,9 @@ public class Wallet
         {
             case WalletPresenter.Upgrades.AutoClicker:
                 BuyUprade(_autoClicker);
+                break;
+            case WalletPresenter.Upgrades.Buhgalter:
+                BuyUprade(_accountant);
                 break;
         }
     }
@@ -37,6 +43,7 @@ public class Wallet
             upgradeToBuy.Upgrade();
         }
     }
+
     public void SpentCoins(int amount)
     {
         _coinsAmount -= amount;

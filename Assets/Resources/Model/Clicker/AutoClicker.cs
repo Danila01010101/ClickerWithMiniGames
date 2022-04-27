@@ -1,8 +1,5 @@
-using UnityEngine;
-
 public class AutoClicker : BaseClicker
 {
-    private int _clickCoinAmount = 1;
     private int _clicksAmount = 1;
 
     public AutoClicker(UpgradeData data)
@@ -28,6 +25,5 @@ public class AutoClicker : BaseClicker
         {
             _isActive = true;
         }
-        Debug.Log("New cost is " + _currentUpgradeCost);
     }
 }

@@ -8,6 +8,7 @@ public abstract class BaseClicker : IUpgrade
     protected bool _isActive = false;
     protected UpgradeData _upgradeData;
     protected int _currentUpgradeCost;
+    protected int _clickCoinAmount = 1;
 
     public int Cost => _currentUpgradeCost;
 

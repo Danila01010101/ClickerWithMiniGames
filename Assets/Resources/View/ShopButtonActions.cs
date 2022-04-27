@@ -9,4 +9,9 @@ public class ShopButtonActions : MonoBehaviour
     {
         ActivateUpgradeButtonPressed?.Invoke(WalletPresenter.Upgrades.AutoClicker);
     }
+
+    public void ActivateAccountant()
+    {
+        ActivateUpgradeButtonPressed?.Invoke(WalletPresenter.Upgrades.Buhgalter);
+    }
 }
