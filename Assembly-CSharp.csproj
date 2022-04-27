@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\AlienDefend\Score.cs" />
     <Compile Include="Assets\Scripts\AlienDefend\SpawnManager.cs" />
     <Compile Include="Assets\Scripts\View\UIButtonActions.cs" />
+    <Compile Include="Assets\Scripts\AlienDefend\GamePause.cs" />
     <Compile Include="Assets\Scripts\Presenter\BarrierSpawnerPresenter.cs" />
     <Compile Include="Assets\Scripts\AlienDefend\HealthBar.cs" />
     <Compile Include="Assets\Scripts\Presenter\WalletPresenter.cs" />
@@ -77,7 +78,7 @@
     <Compile Include="Assets\Scripts\View\CoinsView.cs" />
     <Compile Include="Assets\Scripts\View\Player\IgnoreCollisionAbove.cs" />
     <Compile Include="Assets\Scripts\View\ClickDetector.cs" />
-    <Compile Include="Assets\Scripts\AlienDefend\GamePause.cs" />
+    <Compile Include="Assets\Scripts\AlienDefend\ControlScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

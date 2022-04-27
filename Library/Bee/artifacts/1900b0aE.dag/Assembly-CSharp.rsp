@@ -344,6 +344,7 @@
 "Assets/Scripts/AlienDefend/Bullet.cs"
 "Assets/Scripts/AlienDefend/BulletSpawner.cs"
 "Assets/Scripts/AlienDefend/Cart.cs"
+"Assets/Scripts/AlienDefend/ControlScreen.cs"
 "Assets/Scripts/AlienDefend/GameOver.cs"
 "Assets/Scripts/AlienDefend/GamePause.cs"
 "Assets/Scripts/AlienDefend/HealthBar.cs"
