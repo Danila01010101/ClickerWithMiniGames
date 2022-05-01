@@ -3630,8 +3630,11 @@ MonoBehaviour:
   - {fileID: 3695449554544798400, guid: c9847648850d84f408d721e5ef8d7a2f, type: 3}
   - {fileID: 8205255131272852263, guid: 3b9476c02613b5d4ba2770c875481f82, type: 3}
   coinPrefabs: {fileID: 6301695457601342481, guid: 1048bcad5e3d1ec45bae07b53d65e175, type: 3}
+  heartPrefabs: {fileID: 490580456909851356, guid: 39824a5ed743aca488e4f7e072d0db37, type: 3}
   startDelayCoin: 20
   spawnIntervalCoin: 10
+  startDelayHeart: 30
+  spawnIntervalHeart: 15
 --- !u!4 &1071383990
 Transform:
   m_ObjectHideFlags: 0

@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    [SerializeField] public GameObject[] monsterPrefabs;
-    [SerializeField] public GameObject coinPrefabs;
+    [SerializeField] private GameObject[] monsterPrefabs;
+    [SerializeField] private GameObject coinPrefabs;
+    [SerializeField] private GameObject heartPrefabs;
     [SerializeField] private float startDelayCoin = 20f;
     [SerializeField] private float spawnIntervalCoin = 10f;
+    [SerializeField] private float startDelayHeart = 30f;
+    [SerializeField] private float spawnIntervalHeart = 15f;
 
     private float startDelay = 2f;
     private float spawnInterval = 1f;
@@ -15,6 +18,7 @@ public class SpawnManager : MonoBehaviour
     {
         InvokeRepeating("SpawnRandomMonsters", startDelay, spawnInterval);
         InvokeRepeating("SpawnRandomCoins", startDelayCoin, spawnIntervalCoin);
+        InvokeRepeating("SpawnRandomHearts", startDelayHeart, spawnIntervalHeart);
     }
 
     void SpawnRandomMonsters()
@@ -26,7 +30,13 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnRandomCoins()
     {
-        Vector3 spawnPos = new Vector3(Random.Range(-25, -21), 3f, Random.Range(-10, 11));
+        Vector3 spawnPos = new Vector3(Random.Range(-25, -15), 3f, Random.Range(-10, 11));
         Instantiate(coinPrefabs, spawnPos, coinPrefabs.transform.rotation);
+    }
+
+    void SpawnRandomHearts()
+    {
+        Vector3 spawnPos = new Vector3(Random.Range(-25, -15), 3f, Random.Range(-10, 11));
+        Instantiate(heartPrefabs, spawnPos, heartPrefabs.transform.rotation);
     }
 }

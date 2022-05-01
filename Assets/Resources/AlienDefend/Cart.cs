@@ -27,6 +27,19 @@ public class Cart : MonoBehaviour
         {
             GameOver();
         }
+    }public void AddHealth()
+    {
+        if (currentHealth < 100)
+        {
+            currentHealth += 20;
+            healthBar.SetHealth(currentHealth);
+
+            if (currentHealth > 100)
+            {
+                currentHealth = 100;
+                healthBar.SetHealth(currentHealth);
+            }
+        }
     }
 
     private void StartNitro()
@@ -84,10 +97,12 @@ public class Cart : MonoBehaviour
     private void OnEnable()
     {
         MonsterMove.OnBorderCrossed += TakeDamage;
+        Heart.OnHealthAdding += AddHealth;
     }
 
     private void OnDisable()
     {
         MonsterMove.OnBorderCrossed -= TakeDamage;
+        Heart.OnHealthAdding -= AddHealth;
     }
 }
