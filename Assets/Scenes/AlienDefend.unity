@@ -3629,6 +3629,9 @@ MonoBehaviour:
   monsterPrefabs:
   - {fileID: 3695449554544798400, guid: c9847648850d84f408d721e5ef8d7a2f, type: 3}
   - {fileID: 8205255131272852263, guid: 3b9476c02613b5d4ba2770c875481f82, type: 3}
+  coinPrefabs: {fileID: 6301695457601342481, guid: 1048bcad5e3d1ec45bae07b53d65e175, type: 3}
+  startDelayCoin: 20
+  spawnIntervalCoin: 10
 --- !u!4 &1071383990
 Transform:
   m_ObjectHideFlags: 0
@@ -4150,7 +4153,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 19f0fbbe6f07d334980c5994c274a7ec, type: 2}
+  - {fileID: 2100000, guid: 225ee2ceea9076841a21af2de5222f8b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

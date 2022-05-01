@@ -1,9 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet : MonoBehaviour, ICoinCollector
 {
     [SerializeField] private float speed = 100f;
     [SerializeField] private float boundOne = 0f;
@@ -26,7 +24,7 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<MonsterMove>())
         {
