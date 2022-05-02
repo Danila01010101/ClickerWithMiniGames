@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GlobalWallet : MonoBehaviour
@@ -7,6 +5,10 @@ public class GlobalWallet : MonoBehaviour
     private string _saveMoneyName = "moneyAmount";
     public static GlobalWallet Instance;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     public int GetMoneyAmount()
     {
@@ -15,7 +17,8 @@ public class GlobalWallet : MonoBehaviour
 
     public void AddMoney(int amount)
     {
-        PlayerPrefs.GetInt(_saveMoneyName, GetMoneyAmount() + amount);
+        int newAmount = GetMoneyAmount() + amount;
+        PlayerPrefs.SetInt(_saveMoneyName, newAmount);
     }
 
     public bool SpendMoney(int amount)

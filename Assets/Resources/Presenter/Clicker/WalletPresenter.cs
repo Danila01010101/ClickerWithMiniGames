@@ -17,6 +17,12 @@ public class WalletPresenter : MonoBehaviour
         _wallet = new Wallet(_autoClickerData, _accountantData);
     }
 
+    private void Start()
+    {
+        _wallet.Initialize();
+        Debug.Log("Wallet Initialized");
+    }
+
     private void Update()
     {
         _wallet.Update();

@@ -1,14 +1,14 @@
 using System;
 using UnityEngine;
 
-public class DoodleJumpPresenter : MonoBehaviour
+public class DoodleJumpPresenter : MonoBehaviour, ICoinCollector
 {
     [SerializeField] private float _xMaxPosition;
     [SerializeField] private float _xMinPosition;
     [SerializeField] private float _jumpStreight;
     [SerializeField] private float _sideSpeed;
     [SerializeField] private float _zOffset;
-    [SerializeField] private DoodleJumpCameraView _cameraView;
+    [SerializeField] private DoodleJumpCameraAndFallTriggerView _cameraView;
 
     private Rigidbody _playerRigidbody;
     private Vector3 _newPosition;

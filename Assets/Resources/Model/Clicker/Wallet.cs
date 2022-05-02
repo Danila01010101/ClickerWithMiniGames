@@ -2,15 +2,17 @@ using System;
 
 public class Wallet
 {
-    private int _coinsAmount;
-    public int ÑoinsAmount{ get; }
-
     private AutoClicker _autoClicker;
     private AwerageClicker _accountant;
 
     public AutoClicker AutoClicker => _autoClicker;
     public AwerageClicker Accountant => _accountant;
     public Action<int> CoinAmountChanged;
+
+    public void Initialize()
+    {
+        CoinAmountChanged?.Invoke(GlobalWallet.Instance.GetMoneyAmount());
+    }
 
     public void Update()
     {
@@ -38,7 +40,7 @@ public class Wallet
 
     private void BuyUprade(BaseClicker upgradeToBuy)
     {
-        if (_coinsAmount >= upgradeToBuy.Cost)
+        if (GlobalWallet.Instance.GetMoneyAmount() >= upgradeToBuy.Cost)
         {
             upgradeToBuy.Upgrade();
         }
@@ -46,19 +48,19 @@ public class Wallet
 
     public void SpentCoins(int amount)
     {
-        _coinsAmount -= amount;
-        CoinAmountChanged?.Invoke(_coinsAmount);
+        GlobalWallet.Instance.SpendMoney(amount);
+        CoinAmountChanged?.Invoke(GlobalWallet.Instance.GetMoneyAmount());
     }
 
     public void AddCoins(int amount)
     {
-        _coinsAmount += amount;
-        CoinAmountChanged?.Invoke(_coinsAmount);
+        GlobalWallet.Instance.AddMoney(amount);
+        CoinAmountChanged?.Invoke(GlobalWallet.Instance.GetMoneyAmount());
     }
 
     public void AddClickCoin()
     {
-        _coinsAmount++;
-        CoinAmountChanged?.Invoke(_coinsAmount);
+        GlobalWallet.Instance.AddMoney(1);
+        CoinAmountChanged?.Invoke(GlobalWallet.Instance.GetMoneyAmount());
     }
 }

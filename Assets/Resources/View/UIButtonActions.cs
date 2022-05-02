@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class UIButtonActions : MonoBehaviour
 {
-    public enum SceneNames { RunnerGame }
+    [SerializeField] private GameObject _endGameScreen;
 
     public void SetActiveOnKlick(GameObject gameObject)
     {
@@ -17,8 +17,31 @@ public class UIButtonActions : MonoBehaviour
         }
     }
 
+    public void SetActiveOnEndGame()
+    {
+        if (_endGameScreen != null)
+        {
+            _endGameScreen.SetActive(true);
+        }
+    }
+
     public void LoadSceneOnKlick(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void OnEnable()
+    {
+        EndGameTrigger.OnGameOver += SetActiveOnEndGame;
+    }
+
+    private void OnDisable()
+    {
+        EndGameTrigger.OnGameOver -= SetActiveOnEndGame;
     }
 }
