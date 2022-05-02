@@ -32,11 +32,11 @@ public class DoodleJumpPresenter : MonoBehaviour, ICoinCollector
         }
         if (Input.GetKey(KeyCode.D))
         {
-            _newPosition += Vector3.right * _sideSpeed;
+            _newPosition += Vector3.right * _sideSpeed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            _newPosition += Vector3.right * -_sideSpeed;
+            _newPosition += Vector3.right * -_sideSpeed * Time.deltaTime;
         }
 
         _newPosition.x = Mathf.Clamp(_newPosition.x, _xMinPosition, _xMaxPosition);

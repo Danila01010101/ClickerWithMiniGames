@@ -4459,7 +4459,7 @@ MonoBehaviour:
   _xMaxPosition: 20
   _xMinPosition: -20
   _jumpStreight: 600
-  _sideSpeed: 0.05
+  _sideSpeed: 16
   _zOffset: 0
   _cameraView: {fileID: 1381434164}
 --- !u!114 &1381434159

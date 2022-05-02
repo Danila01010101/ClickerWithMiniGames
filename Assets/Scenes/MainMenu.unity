@@ -4632,7 +4632,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1173557294}
         m_TargetAssemblyTypeName: ShopButtonActions, Assembly-CSharp
         m_MethodName: ActivateAutoClicker
         m_Mode: 1

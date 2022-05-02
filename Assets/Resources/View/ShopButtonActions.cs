@@ -30,7 +30,7 @@ public class ShopButtonActions : MonoBehaviour
 
     public void BuyObjectOnClick(GameObject gameObject)
     {
-        if (!gameObject.activeSelf && GlobalWallet.Instance.SpendMoney(50))
+        if (!gameObject.activeSelf && GlobalWallet.Instance.SpendMoney(500))
         {
             gameObject.SetActive(true);
             PlayerPrefs.SetInt(gameObject.name, 1);
