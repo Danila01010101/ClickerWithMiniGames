@@ -35,6 +35,11 @@ public class UIButtonActions : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
     private void OnEnable()
     {
         EndGameTrigger.OnGameOver += SetActiveOnEndGame;
